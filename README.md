@@ -11,6 +11,7 @@ Staccato is a **universal instrument tuner** written in **React Native**. Minima
 - [ ] Android support
 - [ ] Adjust some values to make the measurements as accurate as possible
 - [ ] Permissions support (iOS)
+- [ ] Add i18n and Polish language support
 
 ## Bug reporting, contributing
 If you have found any bug, or would like to contribute to the project, feel free to open an issue or create a PR.
