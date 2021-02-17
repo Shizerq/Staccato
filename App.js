@@ -1,14 +1,13 @@
 import React from "react";
-import { StatusBar } from "react-native";
 
+import Theme from "./theme";
 import Tuner from "./screens/Tuner";
 
 const App: () => React$Node = () => {
   return (
-    <>
-      <StatusBar barStyle="light-content" />
+    <Theme>
       <Tuner />
-    </>
+    </Theme>
   );
 };
 
