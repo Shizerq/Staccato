@@ -9,7 +9,7 @@ export const Container = styled.View`
 export const Header = styled.Text`
   text-align: center;
   font-size: 20px;
-  color: #ffffff;
+  color: ${({ theme }) => theme.foregroundColor};
   margin-top: 8%;
 `;
 

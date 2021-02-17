@@ -9,7 +9,7 @@ export const Theme = ({ children }) => {
         red: "#F05365",
         green: "#48E5C2",
         background: useColorScheme() === "dark" ? "#000000" : "#FFFFFF",
-        circleColor: useColorScheme() === "dark" ? "#FFFFFF" : "#000000",
+        foregroundColor: useColorScheme() === "dark" ? "#FFFFFF" : "#000000",
       }}>
       {children}
     </ThemeProvider>

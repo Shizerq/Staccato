@@ -8,7 +8,7 @@ export const Circle = styled.View`
 
   border-radius: 132.5px;
   border-style: dotted;
-  border-color: ${({ theme }) => theme.circleColor};
+  border-color: ${({ theme }) => theme.foregroundColor};
   border-width: 6px;
 `;
 
