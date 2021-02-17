@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useColorScheme } from "react-native";
 import {
   useSharedValue,
   useAnimatedStyle,
@@ -7,7 +8,8 @@ import {
 import { useDebounce } from "use-debounce";
 
 import * as Styled from "./index.styled";
-import Background from "../../assets/meter.png";
+import BackgroundDark from "../../assets/meter_dark.png";
+import BackgroundLight from "../../assets/meter_light.png";
 
 export const Meter = ({ color, cents, frequency }) => {
   const offset = useSharedValue(0);
@@ -31,7 +33,9 @@ export const Meter = ({ color, cents, frequency }) => {
   });
 
   return (
-    <Styled.Container source={Background} resizeMode="stretch">
+    <Styled.Container
+      source={useColorScheme() === "dark" ? BackgroundDark : BackgroundLight}
+      resizeMode="stretch">
       <Styled.IndicatorContainer cents={cents} style={[animatedStyles]}>
         <Styled.Indicator color={color} />
         <Styled.Frequency color={color}>{frequency} Hz</Styled.Frequency>

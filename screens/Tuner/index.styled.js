@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 export const Container = styled.View`
   flex: 1;
 
-  background-color: #000000;
+  background-color: ${({ theme }) => theme.background};
 `;
 
 export const Header = styled.Text`

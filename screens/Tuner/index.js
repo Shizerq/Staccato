@@ -2,6 +2,7 @@ import * as React from "react";
 import { SafeAreaView } from "react-native";
 import Pitchfinder from "pitchfinder";
 import Recording from "react-native-recording";
+import { ThemeContext } from "styled-components";
 
 import * as Styled from "./index.styled";
 
@@ -9,10 +10,12 @@ import TunedNote from "../../components/TunedNote";
 import Meter from "../../components/Meter";
 
 export const Tuner = () => {
+  const themeContext = React.useContext(ThemeContext);
+
   const [tunedNote, setTunedNote] = React.useState("None");
   const [cents, setCents] = React.useState(0);
   const [shownFrequency, setShowedFrequency] = React.useState(0);
-  const [color, setColor] = React.useState("#F05365");
+  const [color, setColor] = React.useState(themeContext.red);
   const [status, setStatus] = React.useState("Play a note to start");
 
   React.useEffect(() => {
@@ -39,13 +42,13 @@ export const Tuner = () => {
   React.useEffect(() => {
     if (tunedNote !== "None") {
       if (cents >= -3 && cents <= 3) {
-        setColor("#48E5C2");
+        setColor(themeContext.green);
         setStatus("Tuned");
       } else if (cents >= 4) {
-        setColor("#F05365");
+        setColor(themeContext.red);
         setStatus("Too sharp");
       } else if (cents <= -4) {
-        setColor("#F05365");
+        setColor(themeContext.red);
         setStatus("Too flat");
       }
     }
