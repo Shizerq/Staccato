@@ -2,7 +2,7 @@ import React from "react";
 import { useColorScheme } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 
-export const Theme = ({ children }) => {
+export const Theme: React.FC = ({ children }) => {
   return (
     <ThemeProvider
       theme={{
