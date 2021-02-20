@@ -1,5 +1,9 @@
 import styled from "styled-components/native";
 
+interface TextProps {
+  color: string;
+}
+
 export const Circle = styled.View`
   width: 265px;
   height: 265px;
@@ -19,12 +23,12 @@ export const Container = styled.View`
   align-items: center;
 `;
 
-export const Note = styled.Text`
+export const Note = styled.Text<TextProps>`
   font-size: 80px;
   color: ${({ color }) => color};
 `;
 
-export const Status = styled.Text`
+export const Status = styled.Text<TextProps>`
   font-size: 19px;
   color: ${({ color }) => color};
 `;

@@ -2,6 +2,10 @@ import styled from "styled-components/native";
 import { Dimensions } from "react-native";
 import Animated from "react-native-reanimated";
 
+interface TextProps {
+  color: string;
+}
+
 export const Container = styled.ImageBackground`
   width: ${Dimensions.get("window").width}px;
   height: 175px;
@@ -18,14 +22,14 @@ export const IndicatorContainer = styled(Animated.View)`
   justify-content: center;
 `;
 
-export const Indicator = styled.View`
+export const Indicator = styled.View<TextProps>`
   height: 215px;
   align-self: center;
   width: 5px;
   background: ${({ color }) => color};
 `;
 
-export const Frequency = styled.Text`
+export const Frequency = styled.Text<TextProps>`
   margin-top: 20px;
 
   color: ${({ color }) => color};
