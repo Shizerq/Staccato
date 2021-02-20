@@ -4,7 +4,7 @@ import { StatusBar, useColorScheme } from "react-native";
 import Theme from "./theme";
 import Tuner from "./screens/Tuner";
 
-const App: () => React$Node = () => {
+const App: () => React.ReactNode = () => {
   return (
     <>
       <StatusBar
